@@ -1,0 +1,9 @@
+#Wed Mar 12 20:14:28 CET 2008
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/org.roxgt.core/model/roxgt.genmodel
+gmf_dashboard/domainModel=platform\:/resource/org.roxgt.core/model/roxgt.ecore
+gmf_dashboard/generationModel=platform\:/resource/org.roxgt.core/model/roxgt.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/org.roxgt.core/model/roxgt.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/org.roxgt.core/model/roxgt.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/org.roxgt.core/model/roxgt.gmftool
