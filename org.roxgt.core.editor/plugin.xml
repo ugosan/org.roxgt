@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+
+  <extension
+    point = "org.eclipse.ui.newWizards">
+    <category
+      id = "org.eclipse.emf.ecore.Wizard.category.ID"
+      name="%_UI_Wizard_category">
+    </category>
+    <wizard
+      id = "org.roxgt.presentation.RoxgtModelWizardID"
+      name = "%_UI_RoxgtModelWizard_label"
+      class = "org.roxgt.presentation.RoxgtModelWizard"
+      category = "org.eclipse.emf.ecore.Wizard.category.ID"
+      icon = "icons/full/obj16/RoxgtModelFile.gif">
+      <description>%_UI_RoxgtModelWizard_description</description>
+      <selection class = "org.eclipse.core.resources.IResource" />
+    </wizard>
+  </extension>
+
+  <extension point = "org.eclipse.ui.editors">
+    <editor
+        id = "org.roxgt.presentation.RoxgtEditorID"
+        name = "%_UI_RoxgtEditor_label"
+        icon = "icons/full/obj16/RoxgtModelFile.gif"
+        extensions = "roxgt"
+        class = "org.roxgt.presentation.RoxgtEditor" 
+        contributorClass="org.roxgt.presentation.RoxgtActionBarContributor" >
+    </editor>
+  </extension>    
+</plugin>

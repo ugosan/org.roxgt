@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="sampleBuilder"
+         name="Roxgt Project Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="org.roxgt.project.builder.RoxgtBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="roxgtProject"
+         name="Roxgt Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.roxgt.project.builder.RoxgtNature">
+         </run>
+      </runtime>
+      <builder
+            id="org.roxgt.project.sampleBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.jdt.core.IJavaProject"
+            nameFilter="*"
+            id="org.roxgt.project.contribution1">
+         <action
+               label="Add/Remove Roxgt Nature"
+               class="org.roxgt.project.builder.ToggleNatureAction"
+               menubarPath="additions"
+               enablesFor="+"
+               id="org.roxgt.project.addRemoveNatureAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="Node.gif"
+            id="org.roxgt.project.image1"
+            natureId="org.roxgt.project.roxgtProject">
+      </image>
+   </extension>
+
+</plugin>

@@ -1,0 +1,7 @@
+# Tracing options for the org.roxgt.core.diagram plug-in
+
+# Common issues
+org.roxgt.core.diagram/debug=false
+
+# Visual IDs
+org.roxgt.core.diagram/debug/visualID=false
